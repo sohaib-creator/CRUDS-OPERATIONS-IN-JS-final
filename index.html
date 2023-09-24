@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>products management system</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cruds">
+      <div class="container">
+        <div class="head">
+          <h2 style="text-align: center">CRUDS OPERATIONS IN JS</h2>
+          <br />
+          <p style="text-align: center">products management system</p>
+        </div>
+
+        <div class="input">
+          <input type="text" id="title" placeholder="title" />
+          <div class="price">
+            <input
+              onkeyup="GetTotal()"
+              type="number"
+              name="price"
+              id="price"
+              placeholder="price"
+            />
+            <input
+              onkeyup="GetTotal()"
+              type="number"
+              name="tax"
+              id="tax"
+              placeholder="tax"
+            />
+            <input
+              onkeyup="GetTotal()"
+              type="number"
+              name="ads"
+              id="ads"
+              placeholder="ads"
+            />
+            <input
+              onkeyup="GetTotal()"
+              type="number"
+              name="discount"
+              id="discount"
+              placeholder="discount"
+            />
+            <small id="total"></small>
+          </div>
+          <input type="number" name="count" id="count" placeholder="count" />
+          <input type="text" id="catogary" placeholder="catogary" />
+          <button id="btncreate">Create</button>
+        </div>
+
+        <div class="output">
+          <div class="search">
+            <input
+              type="text"
+              onkeyup="searchData(this.value)"
+              id="searchinp"
+              placeholder="search"
+            />
+            <div class="btnsearch">
+              <button onclick="GetSearchMood(this.id)" id="btn-by-title">
+                search by title
+              </button>
+              <button onclick="GetSearchMood(this.id)" id="btn-by-catogary">
+                search by catogary
+              </button>
+            </div>
+          </div>
+
+          <div id="deleteall"></div>
+          <div class="respo-table">
+            <table>
+              <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>tax</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>total</th>
+                <th>catogary</th>
+                <th>update</th>
+                <th>delete</th>
+              </tr>
+              <tbody id="tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project -->
+    <script src="main.js"></script>
+  </body>
+</html>
